@@ -6,14 +6,15 @@
 <body>
     Hi!
     <!-- Below script means that it is JavaScript code there -->
-    <script>
-        // We are checking if there is MetaMask extension installed in our browser.
-        if(typeof window.ethereum !== "undefined"){
-            //console.log("I see a metamask!")
-            window.ethereum.request({method: "eth_requestAccounts"})
-        } else {
-            console.log("Some JS Code...")
-        }
+    <!-- Importing JavaScript Code From "index.js", type "module" allows us to import modules in our code -->
+    <script src="./index.js" type="module">
+
     </script>
+    <button id="connectButton">
+         Connect
+    </button>
+    <button id="fundButton">
+        Fund
+    </button>
 </body>
 </html>
